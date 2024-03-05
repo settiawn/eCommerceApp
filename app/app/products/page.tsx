@@ -1,4 +1,4 @@
-import { CardSearch } from "../../components/cardSearch";
+import { CardLarge } from "../../components/card-lg";
 
 export default function Products() {
   return (
@@ -35,11 +35,11 @@ export default function Products() {
               </button>
             </div>
 
-            <CardSearch />
-            <CardSearch />
-            <CardSearch />
-            <CardSearch />
-            <CardSearch />
+            <CardLarge />
+            <CardLarge />
+            <CardLarge />
+            <CardLarge />
+            <CardLarge />
           </div>
         </div>
       </div>

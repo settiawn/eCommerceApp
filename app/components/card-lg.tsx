@@ -1,4 +1,4 @@
-export function CardSearch() {
+export function CardLarge() {
   return (
     <div className="border p-2 my-1 font-bold flex rounded-lg relative">
       <div className="flex-none w-60 relative text-center hover:opacity-80 hover:cursor-pointer">
@@ -18,6 +18,12 @@ export function CardSearch() {
           Watashi ga Koibito ni Nareru Wake Naijan, Muri Muri! (Muri
           Janakatta!?)
         </div>
+        <div className="flex flex-row gap-1 my-2">
+          {/* ini tags jadiin komponen ajah */}
+          <div className="bg-red-500 rounded-lg p-1 px-2">Yuri</div>
+          <div className="bg-red-500 rounded-lg p-1 px-2">Comedy</div>
+          <div className="bg-red-500 rounded-lg p-1 px-2">Drama</div>
+        </div>
         <div className="font-normal">
           Longing to be a normie, I, Renako Amaori, am finally making my high
           school debut after working so hard for it. However due to my
@@ -27,10 +33,10 @@ export function CardSearch() {
         </div>
       </div>
       <div className="flex justify-between absolute bottom-0 right-0">
-          <div className="rounded-br-lg w-full bg-sky-500 font-bold p-3 text-white hover:cursor-pointer hover:bg-blue-500">
-            ADD TO WISHLIST
-          </div>
+        <div className="rounded-br-lg w-full bg-sky-500 font-bold p-3 text-white hover:cursor-pointer hover:bg-blue-500">
+          ADD TO WISHLIST
         </div>
+      </div>
     </div>
   );
 }

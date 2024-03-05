@@ -1,33 +1,23 @@
-import { Card } from "../../components/card";
+import { CardMedium } from "../../components/card-med";
 
 export default function Wishlist() {
   return (
     <main className="container flex mx-auto flex-col">
-      <div className=" bg-slate-500 grid">
-        <div className="col-span-4 bg-cyan-300">
+      <div className="grid">
+        <div className="col-span-4 bg-gray-700 ">
           {/* per div */}
           <div className=" m-4">
-            <div className="flex justify-center gap-3 mb-4">
-              <div className="bg-blue-300 font-bold text-4xl">WISHLIST</div>
+            <div className="flex justify-center">
+              <div className="text-blue-500 font-bold text-5xl">WISHLIST</div>
             </div>
-            <div className="flex flex-row gap-3 mb-4">
-              <input
-                type="text"
-                className="w-full py-3 px-4"
-                placeholder="Search series.."
-              />
-              <button className="bg-blue-300 rounded-md p-3 font-bold">
-                SEARCH
-              </button>
-            </div>
-            <div className="grid gap-4 grid-cols-5 grid-rows-1 p-8">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
+            <div className="grid gap-4 grid-cols-5 grid-rows-1 px-5">
+              <CardMedium />
+              <CardMedium />
+              <CardMedium />
+              <CardMedium />
+              <CardMedium />
+              <CardMedium />
+              <CardMedium />
             </div>
           </div>
         </div>

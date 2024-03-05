@@ -1,9 +1,7 @@
-import Link from "next/link";
-
-export function Card() {
+export function CardMedium() {
   return (
     <>
-      <div className="flex flex-col hover:cursor-pointer text-center">
+      <div className="flex flex-col hover:cursor-pointer hover:text-blue-500 text-center">
         <div className="rounded-lg overflow-hidden shadow-lg mt-8 bg-white relative px-0 p-0">
           <div className="flex items-center">
             <div className="">
@@ -15,22 +13,22 @@ export function Card() {
             </div>
           </div>
           <div className="flex absolute bottom-0 w-full text-white">
-            <Link
-              href=""
-              target="_blank"
-              className="w-full bg-green-500 font-bold p-2"
-            >
+            <div className="w-full bg-green-500 font-bold p-2">
               Manga
-            </Link>
+            </div>
+          </div>
+          <div className="flex absolute top-0 w-full">
+            <div className="w-full bg-red-500 text-white hover:bg-red-700 font-bold p-2">
+              REMOVE WISHLIST
+            </div>
           </div>
         </div>
-
-        <div className="w-full p-1 mt-2 font-semibold text-white overflow-hidden text-ellipsis line-clamp-2">
+        <div className="w-full p-1 mt-2 font-semibold line-clamp-2">
           Watashi ga Koibito ni Nareru Wake Naijan, Muri Muri! (Muri
           Janakatta!?)
         </div>
         <div className="text-center font-normal text-sm mt-1">
-        Musshu, Mikami Teren
+          Musshu, Mikami Teren
         </div>
       </div>
     </>
