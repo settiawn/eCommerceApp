@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card } from "./card";
+import { Card } from "../components/card";
 import Link from "next/link";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
           {/* carousel */}
           <div className="flex rounded overflow-hidden shadow-lg bg-white relative px-0 p-0 justify-center content-center">
             <div className="flex absolute h-full w-full text-white">
-              <div className="flex w-full justify-center content-center text-center bg-green-500 opacity-50 font-bold p-3 hover:cursor-pointer">
+              <div className="flex w-full justify-center content-center text-center bg-green-500 font-bold p-3 hover:cursor-pointer">
                 <div className="flex items-center justify-center">read</div>
               </div>
             </div>

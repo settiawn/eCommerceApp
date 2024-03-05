@@ -1,4 +1,4 @@
-import { CardSearch } from "../cardSearch";
+import { CardSearch } from "../../components/cardSearch";
 
 export default function Products() {
   return (

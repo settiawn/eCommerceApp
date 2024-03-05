@@ -1,5 +1,4 @@
-import { Card } from "../card";
-import { CardSearch } from "../cardSearch";
+import { Card } from "../../components/card";
 
 export default function Wishlist() {
   return (
