@@ -7,7 +7,7 @@ export default function Login() {
     <main>
       <div className="container mx-auto">
         <div className="flex content-center items-center justify-center bg-zinc-500">
-          <div className="w-100 bg-red-300 my-5  p-5">
+          <div className="w-100 bg-red-300 my-5 p-5">
             <div className="flex flex-row mb-2 justify-center gap-5 font-bold text-2xl">
               <div className="border w-full text-center py-2">LOGIN</div>
             </div>
