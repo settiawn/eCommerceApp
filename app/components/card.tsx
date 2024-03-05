@@ -20,7 +20,7 @@ export function Card() {
               target="_blank"
               className="w-full bg-green-500 font-bold p-2"
             >
-              Detail
+              Manga
             </Link>
           </div>
         </div>
