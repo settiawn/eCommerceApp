@@ -16,13 +16,19 @@ export default function Login() {
             <form className="flex flex-col pt-5" action="">
               <input
                 className="mb-4 w-96 p-2 text-white bg-gray-500 rounded-sm"
-                type="text"
-                placeholder="Username"
+                name="email"
+                type="email"
+                placeholder="Email"
+                required
+                autoComplete="email"
               />
               <input
                 className="mb-4 w-96 p-2 text-white bg-gray-500 rounded-sm"
+                name="password"
                 type="password"
                 placeholder="Password"
+                required
+                autoComplete="password"
               />
               <div className="rounded-sm mb-4 bg-blue-500 hover:cursor-pointer hover:bg-blue-700 text-center font-bold text-2xl py-2">
                 <button>LOG IN</button>

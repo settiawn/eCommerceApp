@@ -1,7 +1,7 @@
 import { ObjectId } from "mongodb";
 import { db } from "../config";
-import bcryptjs from "bcryptjs";
 import { z } from "zod";
+import { hashPass } from "../helpers/bcrypt";
 
 const userDB = db.collection("Users");
 
@@ -27,15 +27,25 @@ export class UserModel {
     return (await userDB.find().toArray()) as User[];
   }
 
+  static async findUserByEmail(email: string) {
+    return (await userDB.findOne({ email })) as User;
+  }
+
   static async createUser(newUser: NewUserInput) {
     const validation = NewUserInputSchema.safeParse(newUser);
     // console.log(validation);
     if (!validation.success) {
       throw validation.error;
     }
-    return await userDB.insertOne({
+
+    const result = await userDB.insertOne({
       ...newUser,
-      password: bcryptjs.hashSync(newUser.password),
+      password: hashPass(newUser.password),
     });
+
+    return {
+      _id: result.insertedId,
+      ...newUser,
+    };
   }
 }

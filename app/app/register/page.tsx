@@ -15,23 +15,35 @@ export default function Register() {
             <form className="flex flex-col pt-5" action="">
               <input
                 className="mb-4 w-96 p-2 text-white bg-gray-500 rounded-sm"
+                name="name"
                 type="text"
                 placeholder="Enter your name"
+                required
+                autoComplete="name"
               />
               <input
                 className="mb-4 w-96 p-2 text-white bg-gray-500 rounded-sm"
+                name="username"
                 type="text"
                 placeholder="Enter your desired username"
+                required
+                autoComplete="username"
               />
               <input
                 className="mb-4 w-96 p-2 text-white bg-gray-500 rounded-sm"
-                type="text"
+                name="email"
+                type="email"
                 placeholder="Enter your email address"
+                required
+                autoComplete="email"
               />
               <input
                 className="mb-4 w-96 p-2 text-white bg-gray-500 rounded-sm"
+                name="password"
                 type="password"
                 placeholder="Enter your password"
+                required
+                autoComplete="password"
               />
               <div className="rounded-sm mb-4 bg-blue-500 hover:cursor-pointer hover:bg-blue-700 text-center font-bold text-2xl py-2">
                 <button>REGISTER YOUR ACCOUNT</button>
