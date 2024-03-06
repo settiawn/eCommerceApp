@@ -1,7 +1,35 @@
-"use client";
+import { LoginButton } from "@/components/bt-login";
+import { FormError } from "@/components/form-error";
+import { cookies } from "next/headers";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default function Login() {
+  const handleLogin = async (formData: FormData) => {
+    "use server";
+
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+
+    const response = await fetch("http://localhost:3000/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      return redirect("/login?error=" + result.error);
+    }
+
+    cookies().set("Authorization", `Bearer ${result.data.accessToken}`);
+
+    return redirect("/wishlist");
+  };
+
   return (
     <main>
       <div className="container mx-auto">
@@ -13,7 +41,8 @@ export default function Login() {
               </div>
             </div>
 
-            <form className="flex flex-col pt-5" action="">
+            <FormError />
+            <form className="flex flex-col pt-5" action={handleLogin}>
               <input
                 className="mb-4 w-96 p-2 text-white bg-gray-500 rounded-sm"
                 name="email"
@@ -30,9 +59,8 @@ export default function Login() {
                 required
                 autoComplete="password"
               />
-              <div className="rounded-sm mb-4 bg-blue-500 hover:cursor-pointer hover:bg-blue-700 text-center font-bold text-2xl py-2">
-                <button>LOG IN</button>
-              </div>
+
+              <LoginButton />
             </form>
             <div className="text-center font-semibold hover:text-blue-500">
               <Link href="/register">Don't have an account? Register</Link>
