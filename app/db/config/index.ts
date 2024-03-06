@@ -1,5 +1,4 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
-// Replace the uri string with your MongoDB deployment's connection string.
 const uri = process.env.MONGO_URI as string;
 const DB_NAME = process.env.DB_NAME as string;
 
