@@ -1,22 +1,19 @@
 export default function ProductDetail() {
   return (
     <main className="container flex mx-auto flex-col">
-      <div className=" bg-slate-500 grid">
-        <div className="col-span-5 bg-blue-300"></div>
-
+      <div className="grid">
         <div className="col-span-5 bg-blue-300">
-          {/* carousel */}
           <div className="flex h-screen rounded overflow-hidden shadow-lg bg-white relative px-0 p-0 justify-center content-center">
             <div className="flex items-center">
               <img
                 src="https://mangadex.org/covers/e160a8e3-304f-4dca-838b-ee1821c490d8/c9392302-737f-4b2b-92f9-aff1dff45359.png"
                 alt="cover_art"
-                className="blur opacity-80"
+                className="blur opacity-90"
               />
             </div>
             <div className="absolute flex top-20">
-              <div className="col-span-1 bg-red-500 m-4 rounded-sm shadow-2xl">
-                <div className="flex-none w-96 relative text-center">
+              <div className="col-span-1 ml-5 rounded-l">
+                <div className="flex-none w-96 relative text-center mr-2">
                   <img
                     src="https://mangadex.org/covers/e160a8e3-304f-4dca-838b-ee1821c490d8/c9392302-737f-4b2b-92f9-aff1dff45359.png"
                     alt="image not found 404"
@@ -29,9 +26,10 @@ export default function ProductDetail() {
                   </div>
                 </div>
               </div>
-              <div className="col-span-4 bg-gray-700 mr-5 rounded-sm shadow-2xl">
-                {/* per div */}
 
+              <div className="col-span-4 bg-gray-700 mr-5 rounded-r shadow-2xl">
+
+                  {/* metadata */}
                 <div className="flex-1 m-5">
                   <div className="text-3xl mb-3 font-bold">
                     Watashi ga Koibito ni Nareru Wake Naijan, Muri Muri! (Muri
@@ -54,6 +52,95 @@ export default function ProductDetail() {
                     exhausted and said “I can't do this anymore,” and reached my
                     limit!
                   </div>
+                </div>
+                    
+                    {/* images */}
+                <div className="grid gap-4 grid-cols-5 grid-rows-1 px-5 mb-8">
+
+                  {/* bikin komponen image */}
+                  <div className="rounded-lg overflow-hidden mt-8 relative hover:text-gray-700">
+                      <div className="flex items-center">
+                        <div className="">
+                          <img
+                            src="https://mangadex.org/covers/e160a8e3-304f-4dca-838b-ee1821c490d8/c9392302-737f-4b2b-92f9-aff1dff45359.png"
+                            alt="cover_art"
+                            className="opacity-90"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex absolute bottom-0 w-full bg-gray-500">
+                        <div className="w-full font-bold p-2">
+                          Volume 6
+                        </div>
+                      </div>
+                    </div>
+                  <div className="rounded-lg overflow-hidden mt-8 relative hover:text-gray-700">
+                      <div className="flex items-center">
+                        <div className="">
+                          <img
+                            src="https://mangadex.org/covers/e160a8e3-304f-4dca-838b-ee1821c490d8/c9392302-737f-4b2b-92f9-aff1dff45359.png"
+                            alt="cover_art"
+                            className="opacity-90"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex absolute bottom-0 w-full bg-gray-500">
+                        <div className="w-full font-bold p-2">
+                          Volume 6
+                        </div>
+                      </div>
+                    </div>
+                  <div className="rounded-lg overflow-hidden mt-8 relative hover:text-gray-700">
+                      <div className="flex items-center">
+                        <div className="">
+                          <img
+                            src="https://mangadex.org/covers/e160a8e3-304f-4dca-838b-ee1821c490d8/c9392302-737f-4b2b-92f9-aff1dff45359.png"
+                            alt="cover_art"
+                            className="opacity-90"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex absolute bottom-0 w-full bg-gray-500">
+                        <div className="w-full font-bold p-2">
+                          Volume 6
+                        </div>
+                      </div>
+                    </div>
+                  <div className="rounded-lg overflow-hidden mt-8 relative hover:text-gray-700">
+                      <div className="flex items-center">
+                        <div className="">
+                          <img
+                            src="https://mangadex.org/covers/e160a8e3-304f-4dca-838b-ee1821c490d8/c9392302-737f-4b2b-92f9-aff1dff45359.png"
+                            alt="cover_art"
+                            className="opacity-90"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex absolute bottom-0 w-full bg-gray-500">
+                        <div className="w-full font-bold p-2">
+                          Volume 6
+                        </div>
+                      </div>
+                    </div>
+                  <div className="rounded-lg overflow-hidden mt-8 relative hover:text-gray-700">
+                      <div className="flex items-center">
+                        <div className="">
+                          <img
+                            src="https://mangadex.org/covers/e160a8e3-304f-4dca-838b-ee1821c490d8/c9392302-737f-4b2b-92f9-aff1dff45359.png"
+                            alt="cover_art"
+                            className="opacity-90"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex absolute bottom-0 w-full bg-gray-500">
+                        <div className="w-full font-bold p-2">
+                          Volume 6
+                        </div>
+                      </div>
+                    </div>
+
+
+                  
                 </div>
               </div>
             </div>
