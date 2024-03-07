@@ -55,14 +55,30 @@ export default function ProductDetail() {
                 </div>
                     
                     {/* images */}
-                <div className="grid gap-4 grid-cols-5 grid-rows-1 px-5 mb-8">
-
+                <div className="grid gap-4 grid-cols-6 grid-rows-1 px-5 mb-8">
+                      {/* col 6 biar pas 240px */}
                   {/* bikin komponen image */}
                   <div className="rounded-lg overflow-hidden mt-8 relative hover:text-gray-700">
                       <div className="flex items-center">
+                        <div className="w-full">
+                          <img
+                            src="https://d2dq7ifhe7bu0f.cloudfront.net/Volume-5fade7248bf6f56c2e714fc1/kusuriya1_thumbnail_240.jpg"
+                            alt="cover_art"
+                            className="opacity-90 w-full"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex absolute bottom-0 w-full bg-gray-500">
+                        <div className="w-full font-bold p-2">
+                          Volume 6
+                        </div>
+                      </div>
+                    </div>
+                  <div className="rounded-lg overflow-hidden mt-8 relative hover:text-gray-700">
+                      <div className="flex items-center">
                         <div className="">
                           <img
-                            src="https://mangadex.org/covers/e160a8e3-304f-4dca-838b-ee1821c490d8/c9392302-737f-4b2b-92f9-aff1dff45359.png"
+                            src="https://d2dq7ifhe7bu0f.cloudfront.net/Volume-602f7cca12a8f58717d4db9f/apothecarydiaries2_thumbnail_240.jpg"
                             alt="cover_art"
                             className="opacity-90"
                           />
@@ -78,7 +94,7 @@ export default function ProductDetail() {
                       <div className="flex items-center">
                         <div className="">
                           <img
-                            src="https://mangadex.org/covers/e160a8e3-304f-4dca-838b-ee1821c490d8/c9392302-737f-4b2b-92f9-aff1dff45359.png"
+                            src="https://d2dq7ifhe7bu0f.cloudfront.net/Volume-609e84cc75c7bd96129276cf/apothecary3-thumbnail-240.jpg"
                             alt="cover_art"
                             className="opacity-90"
                           />
@@ -94,7 +110,7 @@ export default function ProductDetail() {
                       <div className="flex items-center">
                         <div className="">
                           <img
-                            src="https://mangadex.org/covers/e160a8e3-304f-4dca-838b-ee1821c490d8/c9392302-737f-4b2b-92f9-aff1dff45359.png"
+                            src="https://d2dq7ifhe7bu0f.cloudfront.net/Volume-61957779b98c51aa7db8feb2/viladv1-thumbnail-240.jpg"
                             alt="cover_art"
                             className="opacity-90"
                           />
@@ -110,7 +126,7 @@ export default function ProductDetail() {
                       <div className="flex items-center">
                         <div className="">
                           <img
-                            src="https://mangadex.org/covers/e160a8e3-304f-4dca-838b-ee1821c490d8/c9392302-737f-4b2b-92f9-aff1dff45359.png"
+                            src="https://d2dq7ifhe7bu0f.cloudfront.net/Volume-65a855e920dafd7923fd0709/twinstars1-thumbnail-240.jpg"
                             alt="cover_art"
                             className="opacity-90"
                           />
@@ -122,25 +138,7 @@ export default function ProductDetail() {
                         </div>
                       </div>
                     </div>
-                  <div className="rounded-lg overflow-hidden mt-8 relative hover:text-gray-700">
-                      <div className="flex items-center">
-                        <div className="">
-                          <img
-                            src="https://mangadex.org/covers/e160a8e3-304f-4dca-838b-ee1821c490d8/c9392302-737f-4b2b-92f9-aff1dff45359.png"
-                            alt="cover_art"
-                            className="opacity-90"
-                          />
-                        </div>
-                      </div>
-                      <div className="flex absolute bottom-0 w-full bg-gray-500">
-                        <div className="w-full font-bold p-2">
-                          Volume 6
-                        </div>
-                      </div>
-                    </div>
-
-
-                  
+                    
                 </div>
               </div>
             </div>
