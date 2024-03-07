@@ -1,6 +1,6 @@
 import { Product } from "@/db/models/product";
 
-interface ProductCardProps {
+export interface ProductCardProps {
   product: Product
 }
 

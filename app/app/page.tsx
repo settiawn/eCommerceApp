@@ -62,7 +62,7 @@ export default async function Home() {
     }
   );
 
-  const { data: newNovel } = await responseNewNovel.json();
+  const { data: newNovel } = await responseNewNovel.json()
 
   return (
     <main className="container flex mx-auto flex-col">
