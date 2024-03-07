@@ -8,6 +8,7 @@ export type Product = {
   _id: ObjectId;
   name: string;
   slug: string;
+  type: string;
   author: string;
   description: string;
   excerpt: string;
@@ -25,6 +26,7 @@ export class ProductModel {
     if (!options.type) delete options.type;
     if (!options.sort) delete options.sort;
     if (!options.query) delete options.query;
+    if (!options.limit) delete options.limit;
     // -1 => newest
     // 1 => oldest
 
@@ -57,27 +59,12 @@ export class ProductModel {
       });
     }
 
-    console.log(agg);
-
-    // const agg = [
-    //   {
-    //     $sort: {
-    //       createdAt: -1,
-    //     },
-    //   },
-    //   {
-    //     $match: {
-    //       type: "novel",
-    //     },
-    //   },
-    //   {
-    //     $match: {
-    //       name: regex,
-    //     },
-    //   },
-    // ];
-
-    // console.log(agg);
+    if (options.limit) {
+      return (await productDB
+        .aggregate(agg)
+        .limit(+options.limit)
+        .toArray()) as Product[];
+    }
 
     return (await productDB.aggregate(agg).toArray()) as Product[];
     // return (await productDB.find().toArray()) as Product[];

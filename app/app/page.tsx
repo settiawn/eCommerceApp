@@ -1,3 +1,4 @@
+import { Product } from "@/db/models/product";
 import { CardMedium } from "../components/card-med";
 import { CardSmall } from "@/components/card-sm";
 
@@ -7,7 +8,7 @@ export type banner = {
   description: string;
 };
 
-export default function Home() {
+export default async function Home() {
   const banners: banner[] = [
     {
       title: "JNC Original Light Novel Contest",
@@ -27,6 +28,41 @@ export default function Home() {
         "J-Novel Club is excited to present the audiobook for Slayers! Narrated by the anime's English dub voice actress Lisa Ortiz, listen the exciting adventures of Lina Inverse and her zany companions today!",
     },
   ];
+
+  const responseRecentProducts = await fetch(
+    "http://localhost:3000/api/products?sort=-1&limit=5",
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+  const { data: recentProduct } = await responseRecentProducts.json();
+
+  const responseNewManga = await fetch(
+    "http://localhost:3000/api/products?sort=-1&limit=5&type=manga",
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  const { data: newManga } = await responseNewManga.json();
+
+  const responseNewNovel = await fetch(
+    "http://localhost:3000/api/products?sort=-1&limit=5&type=novel",
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  const { data: newNovel } = await responseNewNovel.json();
 
   return (
     <main className="container flex mx-auto flex-col">
@@ -77,20 +113,19 @@ export default function Home() {
               more than 30 ongoing series, including many fan favorites!
             </div>
             <div className="grid gap-4 grid-cols-5 grid-rows-1 px-7">
-              <CardMedium />
-              <CardMedium />
-              <CardMedium />
-              <CardMedium />
-              <CardMedium />
+              {recentProduct.map((x: Product) => (
+                <CardMedium product={x} key={x.slug} />
+              ))}
             </div>
             <div className="hover:text-blue-500 text-center font-semibold underline text-1xl hover:cursor-pointer py-8 text-2xl text-sky-200">
               See All
             </div>
           </div>
 
+          {/* new manga series */}
           <div className="pt-5">
             <div className="font-bold py-5 text-6xl text-center text-sky-500">
-              New Digital Releases
+              New Manga Releases
             </div>
             <div className="px-20">
               After we finish translating a volume, we compile it into a full
@@ -101,20 +136,19 @@ export default function Home() {
               with exclusive bonus content!
             </div>
             <div className="grid gap-4 grid-cols-5 grid-rows-1 px-7">
-              <CardMedium />
-              <CardMedium />
-              <CardMedium />
-              <CardMedium />
-              <CardMedium />
+              {newManga.map((x: Product) => (
+                <CardMedium product={x} key={x.slug} />
+              ))}
             </div>
             <div className="hover:text-blue-500 text-center font-semibold underline text-1xl hover:cursor-pointer py-8 text-2xl text-sky-200">
               See All
             </div>
           </div>
 
+          {/* new novel series */}
           <div className="pt-5">
             <div className="font-bold py-5 text-6xl text-center text-sky-500">
-              New Physical Releases
+              New Novel Releases
             </div>
             <div className="px-20">
               While primarily a digital publisher, J-Novel Club also publishes
@@ -124,11 +158,9 @@ export default function Home() {
               releases here.
             </div>
             <div className="grid gap-4 grid-cols-5 grid-rows-1 px-7">
-              <CardMedium />
-              <CardMedium />
-              <CardMedium />
-              <CardMedium />
-              <CardMedium />
+              {newNovel.map((x: Product) => (
+                <CardMedium product={x} key={x.slug} />
+              ))}
             </div>
             <div className="hover:text-blue-500 text-center font-semibold underline text-1xl hover:cursor-pointer py-8 text-2xl text-sky-200">
               See All
