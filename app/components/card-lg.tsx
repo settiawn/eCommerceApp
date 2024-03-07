@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { ProductCardProps } from "./card-med";
 import { Tag } from "./tag";
@@ -19,12 +18,8 @@ export function CardLarge({ product }: ProductCardProps) {
         </div>
       </div>
       <div className="flex-1 mx-5">
-        <div
-          className="text-3xl mb-3 hover:cursor-pointer hover:text-blue-500"
-        >
-          < Link href={'/products/' + product.slug}>
-          {product.name}
-          </Link>
+        <div className="text-3xl mb-3 hover:cursor-pointer hover:text-blue-500">
+          <Link href={"/products/" + product.slug}>{product.name}</Link>
         </div>
         <div className="flex flex-row gap-1 my-2">
           {/* ini tags jadiin komponen ajah */}
