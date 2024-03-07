@@ -2,6 +2,7 @@
   {
     "name": "The Apothecary Diaries",
     "slug": "the-apothecary-diaries",
+    "type": "novel",
     "author": "Natsu Hyuuga",
     "description": "In the East is a land ruled by an emperor, whose consorts and serving women live in a sprawling complex known as the hougong, the rear palace. Maomao, an unassuming girl raised in an unassuming town by her apothecary father, never imagined the rear palace would have anything to do with her—until she was kidnapped and sold into service there. Though she looks ordinary, Maomao has a quick wit, a sharp mind, and an extensive knowledge of medicine. That’s her secret, until she encounters a resident of the palace at least as perceptive as she is: the head eunuch, Jinshi. He sees through Maomao’s façade and makes her a lady-in-waiting to none other than the Emperor’s favorite consort… so she can taste the lady’s food for poison! At her lady’s side, Maomao starts to learn about everything that goes on in the rear palace—not all of it seemly. Can she ever lead a quiet life, or will her powers of deduction and insatiable curiosity bring her ever more adventures, and ever more dangers?",
     "excerpt": "In the East is a land ruled by an emperor, whose consorts and serving women live in a sprawling complex known as the hougong, the rear palace.",
@@ -22,6 +23,7 @@
   {
     "name": "The Vexations of a Shut-In Vampire Princess",
     "slug": "the-vexations-of-a-shut-in-vampire-princess",
+    "type": "novel",
     "author": "Kobayashi Kotei",
     "description": "Three years into her life as a shut-in, vampire Terakomari Gandesblood (Komari for short) awakens to find she’s been appointed as a Commander in the Mulnite Imperial Army! The thing is, her new unit consists solely of belligerent ruffians who revolt against their superiors at the slightest hint of weakness. Although Komari hails from a line of vampires as powerful as they are prestigious, her refusal to drink blood has made her the picture of mediocrity-scrawny, un-coordinated, and inept at magic. With the odds stacked against her, will the help of her trusty (and slightly infatuated) maid Vill be enough for this recluse to blunder her way to success? Or will Komari rue the day she ever left the safety of her room?",
     "excerpt": "Three years into her life as a shut-in, vampire Terakomari Gandesblood (Komari for short) awakens to find she’s been appointed as a Commander in the Mulnite Imperial Army!",
@@ -42,6 +44,7 @@
   {
     "name": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
     "slug": "the-magical-revolution-of-the-reincarnated-princess",
+    "type": "novel",
     "author": "Kurasu Piero",
     "description": "As a young girl, Princess Anisphia regained her memories of her past life in another world, and ever since, those memories have inspired her. Though her inability to use magic has affected her reputation, she has dealt with this shortcoming by researching and harnessing the arcane in her own way. When her brother breaks off his engagement with Euphyllia, the daughter of a duke, Anisphia suggests the two move in together and study magicology to restore Euphyllia’s honor-thus beginning a tale that will shape the realm, the world, and their futures!",
     "excerpt": "As a young girl, Princess Anisphia regained her memories of her past life in another world.",
@@ -62,6 +65,7 @@
   {
     "name": "Goblin Slayer",
     "slug": "goblin-slayer",
+    "type": "novel",
     "author": "Kagyuu Kumo",
     "description": "A young priestess has formed her first adventuring party, but almost immediately they find themselves in distress. It's the Goblin Slayer who comes to their rescue--a man who's dedicated his life to the extermination of all goblins, by any means necessary. And when rumors of his feats begin to circulate, there's no telling who might come calling next...",
     "excerpt": "A young priestess has formed her first adventuring party, but almost immediately they find themselves in distress.",
@@ -82,6 +86,7 @@
   {
     "name": "Konosuba: God's Blessing on This Wonderful World!",
     "slug": "konosuba",
+    "type": "novel",
     "author": "Akatsuki Natsume",
     "description": "Game loving shut-in Kazuma Sato's life as a young schoolboy in Japan abruptly comes to an early end...or at least it was supposed to. When he opens his eyes, though, he sees a beautiful goddess that offers him a once in an after-lifetime chance to be reborn in a parallel world. The catch is that the world is violent and threatened by a growing evil! Fortunately, he can choose any one thing to bring with him. So he chooses the goddess, Aqua! And so his adventure with his gorgeous companion begins--if he could just get enough money and food to survive, keep his goddess out of trouble, and avoid grabbing the attention of the Demon King's army!",
     "excerpt": "Game loving shut-in Kazuma Sato's life as a young schoolboy in Japan abruptly comes to an early end...or at least it was supposed to.",
@@ -102,6 +107,7 @@
   {
     "name": "Is It Wrong to Try to Pick Up Girls in a Dungeon?",
     "slug": "is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon",
+    "type": "novel",
     "author": "Oomori Fujino",
     "description": "In Orario, fearless adventurers band together in search of fame and fortune within the monstrous underground labyrinth known as Dungeon. But while riches and renown are incentive enough for most, Bell Cranel, would-be hero extraordinaire, has bigger plans. He wants to pick up girls. Is it wrong to face the perils of Dungeon alone, in a single-member guild blessed by a failed goddess? Maybe. Is it wrong to dream of playing hero to hapless maidens in Dungeon? Maybe not. After one misguided adventure, Bell quickly discovers that anything can happen in the labyrinth--even chance encounters with beautiful women. The only problem? He's the one who winds up the damsel in distress!",
     "excerpt": "In Orario, fearless adventurers band together in search of fame and fortune within the monstrous underground labyrinth known as Dungeon.",
@@ -122,6 +128,7 @@
   {
     "name": "Magical Girl Raising Project",
     "slug": "magical-girl-raising-project",
+    "type": "novel",
     "author": "Endou Asari",
     "description": "Sugar and spice--but not playing nice! The hit smartphone game Magical Girl Raising Project is not only free, but one in tens of thousands of players will win real-life powers. In N City, sixteen of these lucky girls help the city's citizens--until upper management announces that each week, the least productive magical girl will lose her gifts. But this is no ordinary contest, and as the rules become increasingly sadistic, the competition to keep their powers becomes a vicious battle for the girls' very lives...",
     "excerpt": "Sugar and spice--but not playing nice! The hit smartphone game Magical Girl Raising Project is not only free, but one in tens of thousands of players will win real-life powers. ",
@@ -142,6 +149,7 @@
   {
     "name": "My Happy Marriage",
     "slug": "my-happy-marriage",
+    "type": "novel",
     "author": "Agitogi Akumi",
     "description": "IS THIS MARRIAGE A BLESSING? OR A CURSE? Born talentless to a noble family famous for their supernatural abilities, Miyo Saimori is forced into an existence of servitude by her abusive stepmother. When Miyo finally comes of marriageable age, though, her hopes of being whisked away to a better life crumble after she discovers her fiancé’s identity: Kiyoka Kudou, a commander apparently so cold and cruel that his previous would-be brides all fled within three days of their engagements. With no home to return to, Miyo resigns herself to her fate-and soon finds that her pale and beautiful husband-to-be is anything but the monster she expected. As they slowly open their hearts to each other, both realize the other may be their chance at finding true love and happiness.",
     "excerpt": "IS THIS MARRIAGE A BLESSING? OR A CURSE? Born talentless to a noble family famous for their supernatural abilities, Miyo Saimori is forced into an existence of servitude by her abusive stepmother.",
@@ -162,6 +170,7 @@
   {
     "name": "Re:ZERO -Starting Life in Another World",
     "slug": "re-zero-starting-life-in-another-world",
+    "type": "novel",
     "author": "Nagatsuki Tappei",
     "description": "Subaru Natsuki was just trying to get to the convenience store but wound up summoned to another world. He encounters the usual things--life-threatening situations, silver haired beauties, cat fairies--you know, normal stuff. All that would be bad enough, but he's also gained the most inconvenient magical ability of all--time travel, but he's got to die to use it. How do you repay someone who saved your life when all you can do is die?",
     "excerpt": "Subaru Natsuki was just trying to get to the convenience store but wound up summoned to another world.",
@@ -182,6 +191,7 @@
   {
     "name": "Sugar Apple Fairy Tale",
     "slug": "sugar-apple-fairy-tale",
+    "type": "novel",
     "author": "Mikawa Miri",
     "description": "Anne Halford is a candy crafter determined to follow in her mother’s footsteps and become a Silver Sugar Master—a title bestowed only by royalty—by winning first place in the Royal Candy Fair. The journey to the capital will be dangerous, however, so she purchases Challe, a handsome but foulmouthed fairy, to be her bodyguard. Anne wishes to befriend her new companion, but in this kingdom where fairies are treated as property, Challe wants nothing to do with humans. Will this journey with her change his mind? And will Anne arrive safely at the fair?",
     "excerpt": "Anne Halford is a candy crafter determined to follow in her mother’s footsteps and become a Silver Sugar Master—a title bestowed only by royalty—by winning first place in the Royal Candy Fair.",
@@ -201,6 +211,7 @@
   {
     "name": "The Empty Box and Zeroth Maria",
     "slug": "the-empty-box-and-zeroth-maria",
+    "type": "novel",
     "author": "Mikage Eiji",
     "description": "Kazuki Hoshino treasures nothing more than his ordinary life, and March 2 should have been an ordinary day. The arrival of a transfer student, the mysterious Aya Otonashi, shouldn't have shattered the world he knows. He's never seen this girl before in his life, but she says she's met him thousands of times--and declares war on him for a crime he can't even remember... As the truth begins to unravel, nothing is as it seems, and at the heart of it all is a wish powerful enough to change everything...",
     "excerpt": "Kazuki Hoshino treasures nothing more than his ordinary life, and March 2 should have been an ordinary day.",
@@ -221,6 +232,7 @@
   {
     "name": "The Asterisk War",
     "slug": "the-asterisk-war",
+    "type": "novel",
     "author": "Miyazaki Yuu",
     "description": "The school-city of Rokka-also known as 'Asterisk.' Here boys and girls of the Starpulse Generation all compete in the Seibusai-the 'star battle festival,' fighting for glory on the greatest combat entertainment stage of the world. Ayato Amagiri has just arrived at one of these academies at the express invitation of its student council president, but when he begins his career by making a dangerous enemy, his life on Asterisk is off to a rough start!",
     "excerpt": "The school-city of Rokka-also known as 'Asterisk.' Here boys and girls of the Starpulse Generation all compete in the Seibusai-the 'star battle festival,' fighting for glory on the greatest combat entertainment stage of the world.",
@@ -241,6 +253,7 @@
   {
     "name": "The Demon Sword Master of Excalibur Academy",
     "slug": "the-demon-sword-master-of-excalibur-academy",
+    "type": "novel",
     "author": "Shimizu Yuu",
     "description": "Awakening from magical stasis after a thousand years, the Dark Lord Leonis suddenly finds himself in the body of a ten-year-old boy! He quickly meets Riselia, a girl confronting the Voids, creatures that have nearly exterminated humanity. Determined to uncover the mysteries of this strange new era, Leonis enrolls in Excalibur Academy, a school that trains students to fight back against these enigmatic monsters. Could the Voids hold some connection to Leonis’s past?",
     "excerpt": "Awakening from magical stasis after a thousand years, the Dark Lord Leonis suddenly finds himself in the body of a ten-year-old boy!",
@@ -261,6 +274,7 @@
   {
     "name": "Spice and Wolf",
     "slug": "spice-and-wolf",
+    "type": "novel",
     "author": "HASEKURA Isuna",
     "description": "The life of a traveling merchant is a lonely one, a fact with which Kraft Lawrence is well acquainted. Wandering from town to town with just his horse, cart, and whatever wares have come his way, the peddler has pretty well settled into his routine-that is, until the night Lawrence finds a wolf goddess asleep in his cart. Taking the form of a fetching girl with wolf ears and a tail, Holo has wearied of tending to harvests in the countryside and strikes up a bargain with the merchant to lend him the cunning of 'Holo the Wisewolf' to increase his profits in exchange for taking her along on his travels. What kind of businessman could turn down such an offer? Lawrence soon learns, though, that having an ancient goddess as a traveling companion can be a bit of a mixed blessing. Will this wolf girl turn out to be too wild to tame?",
     "excerpt": "The life of a traveling merchant is a lonely one, a fact with which Kraft Lawrence is well acquainted.",
@@ -281,6 +295,7 @@
   {
     "name": "WorldEnd: What Do You Do at the End of the World? Are You Busy? Will You Save Us?",
     "slug": "world-end",
+    "type": "novel",
     "author": "Kareno Akira",
     "description": "Everyone wants to be remembered... Untold years after the strange Beasts drove humanity to extinction, Willem emerges from his slumber as the sole survivor. A new civilization of various other races has risen on the floating islands, but there'sno place for a featureless human among them. After aimlessly wandering for a time, Willem grudgingly accepts a job with the military, only to discover that the 'weapons' he watches over are in fact young faeries. As he slowly learns more about the children and how they're linked to his past, the war with the Beasts grows increasingly desperate. When the girls prepare to fight a hopeless battle, is there anything a lone human can do...?",
     "excerpt": "Everyone wants to be remembered... Untold years after the strange Beasts drove humanity to extinction, Willem emerges from his slumber as the sole survivor.",
@@ -301,6 +316,7 @@
   {
     "name": "Ascendance of a Bookworm",
     "slug": "ascendance-of-a-bookworm",
+    "type": "manga",
     "author": "Kazuki Miya",
     "description": "A certain college girl who's loved books ever since she was a little girl dies in an accident and is reborn in another world she knows nothing about. She is now Myne, the sickly five-year-old daughter of a poor soldier. To make things worse, the world she's been reborn in has a very low literacy rate and books mostly don't exist. She'd have to pay an enormous amounts of money to buy one. Myne resolves herself: If there aren't any books, she'll just have to make them! Her goal is to become a librarian. This story begins with her quest to make books so she can live surrounded by them! Dive into this biblio-fantasy written for book lovers and bookworms!",
     "excerpt": "A certain college girl who's loved books ever since she was a little girl dies in an accident and is reborn in another world she knows nothing about. ",
@@ -321,6 +337,7 @@
   {
     "name": "The Summer You Were There",
     "slug": "the-summer-you-were-there",
+    "type": "manga",
     "author": "Yuama",
     "description": "Shizuku Hoshikawa, a high school girl who lives avoiding contact with people, writes a novel which is accidentally read by her classmate Kaori Asaka. She loves it but finds out Hoshikawa wasn't planning to write anymore due to lack of ideas. To encourage her, Kaori suggests: 'Let's start going out, you and me... You can write a story about our own love.'",
     "excerpt": "Shizuku Hoshikawa, a high school girl who lives avoiding contact with people, writes a novel which is accidentally read by her classmate Kaori Asaka.",
@@ -341,6 +358,7 @@
   {
     "name": "Bloom Into You",
     "slug": "bloom-into-you",
+    "type": "manga",
     "author": "Nakatani Nio",
     "description": "Yuu has always loved shoujo manga and fantasizes about the day that she too will get a love confession that will send her heart a-flutter. Yet when a male classmate confesses his feelings for her... she feels nothing. Disappointed and confused, Yuu enters high school still unsure how to respond. That’s when Yuu sees the beautiful student council president Nanami turn down a suitor with such maturity and finesse that Yuu is inspired to ask her for advice. But when the next person to confess to Yuu is the alluring Nanami herself, has Yuu's shoujo romance finally begun?",
     "excerpt": "Yuu has always loved shoujo manga and fantasizes about the day that she too will get a love confession that will send her heart a-flutter.",
@@ -361,6 +379,7 @@
   {
     "name": "Syllabary of Love",
     "slug": "syllabary-of-love",
+    "type": "manga",
     "author": "Yoshida Morohe",
     "description": "Fushimi Inari has a hopeless crush on her classmate Tanbabashi. One day, while trying to interact with him, she accidentally humiliates him in front of the whole class. He refuses to accept her apologies, and, to make matters worse, she discovers that he probably has a crush on their incredibly cute classmate Sumizome. \nShe has all these things in mind when she is summoned by Uka-no-Mitama-no-kami, a pale fox goddess. In return for rescuing a little fox-spirit creature before school that day, the goddess offers to grant a single wish of Inari's. Without thinking, she blurts out that she wants to be Sumizome. As one might expect, this wish does not go nearly as well as Inari had hoped, and the kindly goddess breaks a goddess-rule to give Inari the ability to change herself back. Now, Inari can change her own shape at will, and using her new skill is very tempting as she keeps trying to win Tanbabashi's heart. But if Inari flaunts her ability, both she and the goddess might end up in trouble with Amaterasu!",
     "excerpt": "Fushimi Inari has a hopeless crush on her classmate Tanbabashi. One day, while trying to interact with him, she accidentally humiliates him in front of the whole class. He refuses to accept her apologies, and, to make matters worse, she discovers that he probably has a crush on their incredibly cute classmate Sumizome.",
@@ -381,6 +400,7 @@
   {
     "name": "my-star",
     "slug": "my-star",
+    "type": "manga",
     "author": "Akasaka Aka",
     "description": "The story begins with a beautiful girl, her perfectly fake smile, and the people who love her selfishly for it. \nWhat transpires behind the scenes of the glittering showbiz industry? How far would you go for the sake of your beloved idol? What would you do if you found out reincarnation was real? The star of the show is Aquamarine Hoshino and the stage is but a mere facade. Will he manage to reach the climax before the world of glamour swallows him whole?",
     "excerpt": "The story begins with a beautiful girl, her perfectly fake smile, and the people who love her selfishly for it.",
@@ -401,6 +421,7 @@
   {
     "name": "Boy's Abyss",
     "slug": "boys-abyss",
+    "type": "manga",
     "author": "Minenami Ryo",
     "description": "In a town with nothing, in the middle of a daily life with seemingly no signs of change, high schooler Reiji Kurose was 'just' living. \nFamily, dreams for the future, childhood friends were all binding him down to that city. \nHe thought he would 'just' keep on living like that. Until he met her. \nIs there hope in living? Is there light waiting ahead? \nIt's the start of a boy meets girl series which reflects the 'now'.",
     "excerpt": "In a town with nothing, in the middle of a daily life with seemingly no signs of change, high schooler Reiji Kurose was 'just' living.",
@@ -421,6 +442,7 @@
   {
     "name": "Frieren - Beyond Journey's End",
     "slug": "frieren-beyond-journeys-end",
+    "type": "manga",
     "author": "Yamada Kanehito",
     "description": "The adventure is over but life goes on for an elf mage just beginning to learn what living is all about. Elf mage Frieren and her courageous fellow adventurers have defeated the Demon King and brought peace to the land. With the great struggle over, they all go their separate ways to live a quiet life. But as an elf, Frieren, nearly immortal, will long outlive the rest of her former party. How will she come to terms with the mortality of her friends? How can she find fulfillment in her own life, and can she learn to understand what life means to the humans around her? Frieren begins a new journey to find the answer.",
     "excerpt": "The adventure is over but life goes on for an elf mage just beginning to learn what living is all about. ",
@@ -441,6 +463,7 @@
   {
     "name": "Delicious in Dungeon",
     "slug": "delicious-in-dungeon",
+    "type": "manga",
     "author": "Kui Ryoko",
     "description": "After his sister is devoured by a dragon and losing all their supplies in a failed dungeon raid, Laios and his party are determined to save his sister before she gets digested. Completely broke and having to resort to eating monsters as food, they meet a dwarf who will introduce them to the world of Dungeon Meshi - delicious cuisine made from ingredients such as the flesh of giant bats, walking mushrooms, or even screaming mandrakes.",
     "excerpt": "After his sister is devoured by a dragon and losing all their supplies in a failed dungeon raid, Laios and his party are determined to save his sister before she gets digested.",
@@ -461,6 +484,7 @@
   {
     "name": "Atelier of Witch Hat",
     "slug": "atelier-of-witch-hat",
+    "type": "manga",
     "author": "Shirahama Kamome",
     "description": "In a world where everyone takes wonders like magic spells and dragons for granted, Coco is a girl with a simple dream: she wants to be a wizard. \nBut everybody knows magicians are born, not made, and she was not born with a gift for magic. \nResigned to her un-magical life, Coco is about to give up on her dream until the day she meets Qifrey, a mysterious traveling magician. After secretly watching him perform magic in a way she’s never seen before, Coco soon learns what everybody “knows” might not be the truth and discovers that her magical dream may not be as far away as it seems…",
     "excerpt": "In a world where everyone takes wonders like magic spells and dragons for granted, Coco is a girl with a simple dream: she wants to be a wizard.",
@@ -481,6 +505,7 @@
   {
     "name": "There’s No Freaking Way I’ll be Your Lover! Unless…",
     "slug": "theres-no-freaking-way-ill-be-your-lover-unless",
+    "type": "manga",
     "author": "Mikami Teren",
     "description": "Longing to be a normie, I, Renako Amaori, am finally making my high school debut after working so hard for it. However due to my communication impairment, I have a gloomy aura. And after being in the normie group day in day out, I got so exhausted and said 'I can't do this anymore,' and reached my limit! \nDuring that time, I accidentally met the top student of our school. Perfect in face and figure, unrivaled in sword and pen, our school's best high school girl: Mai Odzuka. \nWe found in each other someone who we could open to and talk about our own troubles. What a nice friend I made, now I can surely get back on my own feet…is what I thought! \n'It seems that you, even as a girl, have made me fall in love with you.' \nWhat!? Mai suddenly confessed to me. Wait! What about our friendship? \nAnd so, we now have different feelings we can’t tell each other: friendship or a romantic relationship. We’re now presenting each other its benefits and put them into practice to see what kind of relationship works best for us. Will I succeed with a successful high school life…?",
     "excerpt": "Longing to be a normie, I, Renako Amaori, am finally making my high school debut after working so hard for it. However due to my communication impairment, I have a gloomy aura. And after being in the normie group day in day out, I got so exhausted and said “I can't do this anymore,” and reached my limit!",
@@ -501,6 +526,7 @@
   {
     "name": "Adachi and Shimamura",
     "slug": "adachi-and-shimamura",
+    "type": "manga",
     "author": "Iruma Hitoma",
     "description": "In the middle of the school day, on the second floor of the gym. This is where the two came to skip class, and it's where their friendship began. A story of two high school girls, playing ping-pong and chatting as they spend the heydays of their youth.",
     "excerpt": "In the middle of the school day, on the second floor of the gym. This is where the two came to skip class, and it's where their friendship began.",
@@ -520,6 +546,7 @@
   {
     "name": "Goodnight Punpun",
     "slug": "goodnight-punpun",
+    "type": "manga",
     "author": "Asano Inio",
     "description": "Punpun Onodera is a normal 11-year-old boy living in Japan. Hopelessly idealistic and romantic, Punpun begins to see his life take a subtle—though nonetheless startling—turn to the adult when he meets the new girl in his class, Aiko Tanaka. It is then that the quiet boy learns just how fickle maintaining a relationship can be, and the surmounting difficulties of transitioning from a naïve boyhood to a convoluted adulthood. When his father assaults his mother one night, Punpun realizes another thing: those whom he looked up to were not as impressive as he once thought. \nAs his problems increase, Punpun's once shy demeanor turns into voluntary reclusiveness. Rather than curing him of his problems and conflicting emotions, this merely intensifies them, sending him down the dark path of maturity in this grim coming-of-age saga.",
     "excerpt": "Punpun Onodera is a normal 11-year-old boy living in Japan.",
@@ -540,6 +567,7 @@
   {
     "name": "Spirit Circle",
     "slug": "spirit-circle",
+    "type": "manga",
     "author": "Mizukami Satoshi",
     "description": "Fuuta Okeya is a normal boy, except he sees ghosts. A beautiful girl, Kouko Ishigami, transfers into his class, but acts aggressively towards him. Fuuta tries to get along with her, but ends up failing after she sees the birthmark she usually keeps covered. She then declares him as her enemy, his birthmark as a cursed mark, and claims that they have a long history together in their reincarnations.",
     "excerpt": "Fuuta Okeya is a normal boy, except he sees ghosts.",
@@ -560,6 +588,7 @@
   {
     "name": "Land of the Lustrous",
     "slug": "land-of-the-lustrous",
+    "type": "manga",
     "author": "Ichikawa Haruko",
     "description": "In the distant future, a new life form called The Lustrous are born. The 28 Lustrous must fight against the Lunarians who want to attack them and turn them into decorations, thus each Lustrous is assigned a role such as a fighter or a medic. Though they hope to fight the Lunarians, Phos is a Lustrous who is given no assignment until the Lustrous' master Adamantine asks them to write an encyclopedia.",
     "excerpt": "In the distant future, a new life form called The Lustrous are born.",
@@ -580,6 +609,7 @@
   {
     "name": "Shangri-La Frontier",
     "slug": "shangri-la-frontier",
+    "type": "manga",
     "author": "katarina",
     "description": "Second-year high school student Rakuro Hizutome loves nothing more than finding so-called “trash games” and beating the crap out of them. When he decides to change things up by playing a new, “god-tier” VR game known as Shangri-La Frontier (aka. SLF), he does what he does best: min-maxes, skips the prologue, and jumps straight into action! Rakuro may be a seasoned gamer, but a meeting with an old rival will change the fate of every SLF player forever. \nClad in nothing but shorts and a bird mask, Rakuro (player name: Sunraku) launches into the world of SLF. Things are going well at first as he takes down a goblin, a bunny, and even a python. But then Sunraku comes up against a huge, hard-hitting wolf known as Lycagon the Nightslayer. Will Sunraku’s years of “trash game” experience be enough, or is he about to suffer a rude awakening just a few hours into his SLF adventure?",
     "excerpt": "Second-year high school student Rakuro Hizutome loves nothing more than finding so-called “trash games” and beating the crap out of them.",
@@ -600,6 +630,7 @@
   {
     "name": "The Demon Girl Next Door",
     "slug": "the-demon-girl-next-door",
+    "type": "manga",
     "author": "Itou Izumo",
     "description": "Awakening her dormant abilities as a demon one day, Yoshida Yuko aka Shadow Mistress Yuko, is entrusted with the mission to defeat the Light clan's priestess, a magical girl, by her ancestor Lilith. Yuko meets magical girl Chiyoda Momo through her classmate Sata Anri, and challenges her to a duel, but loses quickly due to her lack of strength.",
     "excerpt": "Awakening her dormant abilities as a demon one day, Yoshida Yuko aka Shadow Mistress Yuko, is entrusted with the mission to defeat the Light clan's priestess, a magical girl, by her ancestor Lilith.",
