@@ -4,7 +4,7 @@ import { CardWishlist } from "@/components/card-wishlist";
 import { Product } from "@/db/models/product";
 import { Wishlist } from "@/db/models/wishlist";
 
-type WishlistDetail = Partial<Wishlist> & { ProductDetails: Product };
+export type WishlistDetail = Partial<Wishlist> & { ProductDetails: Product };
 
 export default function Wishlist() {
   const [data, setData] = useState([]);
@@ -38,7 +38,7 @@ export default function Wishlist() {
             </div>
             <div className="grid gap-4 grid-cols-7 grid-rows-1 px-5">
               {data.map((x: WishlistDetail, i: number) => (
-                <CardWishlist product={x.ProductDetails} key={i} />
+                <CardWishlist wishlist={x} key={i} />
               ))}
             </div>
           </div>

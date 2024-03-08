@@ -4,23 +4,53 @@ import { MiniCard } from "@/components/card-mini";
 import { Tag } from "@/components/tag";
 import { Product } from "@/db/models/product";
 
+//seo metadata
+import type { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const slug = params.slug;
+
+  // fetch data
+  const product = await fetchDataBySlug(slug);
+
+  return {
+    title: product.name,
+    description: product.description,
+    openGraph: {
+      images: [product.thumbnail || ""],
+    },
+  };
+}
+
+async function fetchDataBySlug(slug: string) {
+  const response = await fetch("http://localhost:3000/api/products/" + slug, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  if (!response.ok) {
+    throw new Error("Error!");
+  }
+  const { data }: { data: Product } = await response.json();
+  return data;
+}
+
 export default async function ProductDetail({
   params,
 }: {
   params: { slug: string };
 }) {
-  console.log(params.slug);
-
-  const response = await fetch(
-    "http://localhost:3000/api/products/" + params.slug,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
-  const { data }: { data: Product } = await response.json();
+  const data = await fetchDataBySlug(params.slug);
 
   return (
     <main className="container flex mx-auto flex-col">
@@ -44,7 +74,7 @@ export default async function ProductDetail({
                   />
                   <div className="flex justify-between absolute bottom-0 w-full">
                     <div className="w-full bg-sky-500 font-bold p-3 text-white hover:cursor-pointer hover:bg-blue-500 rounded-b-sm">
-                      < AddToWishlistButton slug={data.slug} />
+                      <AddToWishlistButton slug={data.slug} />
                     </div>
                   </div>
                 </div>

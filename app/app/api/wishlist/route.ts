@@ -55,10 +55,10 @@ export async function POST(request: Request) {
 export async function DELETE(request: Request) {
   try {
     const body = await request.json();
+    
     const userId = request.headers.get("x-id-user") ?? ("" as string);
-    const data = await WishlistModel.findById(
-      new ObjectId(String(body.wishlistId))
-    );
+    const data = await WishlistModel.findById(body.wishlistId);
+    
     if (!data) throw error;
     if (data.userId.toString() !== userId) throw error;
 
@@ -68,6 +68,8 @@ export async function DELETE(request: Request) {
       message: "Wishlist has been deleted",
     });
   } catch (error) {
+    console.log(error);
+    
     return NextResponse.json(
       {
         error: "Internal Server Error",

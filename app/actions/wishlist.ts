@@ -1,4 +1,5 @@
 "use server";
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 export const addWishlist = async (slug: string) => {
@@ -6,6 +7,7 @@ export const addWishlist = async (slug: string) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Cookie: cookies().toString(),
     },
     body: JSON.stringify({ slug }),
   });
@@ -23,6 +25,7 @@ export const removeWishlist = async (wishlistId: string) => {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
+      Cookie: cookies().toString(),
     },
     body: JSON.stringify({ wishlistId }),
   });
@@ -32,5 +35,5 @@ export const removeWishlist = async (wishlistId: string) => {
     return redirect("/products?error=" + result.error);
   }
 
-  return redirect("/products");
+  return redirect("/products")
 };

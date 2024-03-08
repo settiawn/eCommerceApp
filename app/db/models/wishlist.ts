@@ -37,19 +37,16 @@ export class WishlistModel {
     return (await wishlistDB.aggregate(agg).toArray()) as Wishlist[];
   }
 
-  static async findById(wishlistId: ObjectId) {
-    return (await wishlistDB.findOne({ _id: wishlistId })) as Wishlist;
+  static async findById(wishlistId: string) {
+    return (await wishlistDB.findOne({ _id: new ObjectId(String(wishlistId)) })) as Wishlist;
   }
 
   static async addToWishlist(productId: ObjectId, userId: ObjectId) {
     try {
-      console.log(productId, userId, "Dari models");
-      
       const data = await this.findAllWishlist(userId);
       const validate = data.filter(
         (x) => x.productId.toString() === productId.toString()
       );
-      console.log(validate.length);
 
       if (validate.length > 0) throw new Error("DuplicateWishlist");
 
@@ -59,8 +56,6 @@ export class WishlistModel {
         createdAt: new Date(),
         updatedAt: new Date(),
       });
-
-      console.log("OK");
       
       return null;
     } catch (error) {

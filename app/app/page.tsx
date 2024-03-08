@@ -1,6 +1,7 @@
 import { Product } from "@/db/models/product";
 import { CardMedium } from "../components/card-med";
 import { CardSmall } from "@/components/card-sm";
+import Link from "next/link";
 
 export type banner = {
   title: string;
@@ -49,7 +50,6 @@ export default async function Home() {
       },
     }
   );
-
   const { data: newManga } = await responseNewManga.json();
 
   const responseNewNovel = await fetch(
@@ -61,7 +61,6 @@ export default async function Home() {
       },
     }
   );
-
   const { data: newNovel } = await responseNewNovel.json()
 
   return (
@@ -117,9 +116,7 @@ export default async function Home() {
                 <CardMedium product={x} key={x.slug} />
               ))}
             </div>
-            <div className="hover:text-blue-500 text-center font-semibold underline text-1xl hover:cursor-pointer py-8 text-2xl text-sky-200">
-              See All
-            </div>
+
           </div>
 
           {/* new manga series */}
@@ -140,9 +137,7 @@ export default async function Home() {
                 <CardMedium product={x} key={x.slug} />
               ))}
             </div>
-            <div className="hover:text-blue-500 text-center font-semibold underline text-1xl hover:cursor-pointer py-8 text-2xl text-sky-200">
-              See All
-            </div>
+
           </div>
 
           {/* new novel series */}
@@ -163,7 +158,7 @@ export default async function Home() {
               ))}
             </div>
             <div className="hover:text-blue-500 text-center font-semibold underline text-1xl hover:cursor-pointer py-8 text-2xl text-sky-200">
-              See All
+              <Link href="/products">See All</Link>
             </div>
           </div>
         </div>
@@ -172,20 +167,14 @@ export default async function Home() {
         <div className="col-span-1 bg-gray-700">
           <div className="w-100 border m-2">
             <div className="flex flex-row justify-between font-bold text-2xl hover:cursor-pointer">
-              <div className="hover:bg-gray-600 text-sky-500  w-1/2 text-center p-2">
-                UPCOMING
-              </div>
-              <div className="hover:bg-gray-600 text-sky-500 border-b border-l w-1/2 text-center p-2">
-                RECENT
+              <div className="hover:bg-gray-600 text-sky-500 w-full text-center p-2">
+              RECENT UPDATES
               </div>
             </div>
             <div className="p-1">
-              <CardSmall />
-              <CardSmall />
-              <CardSmall />
-              <CardSmall />
-              <CardSmall />
-              <CardSmall />
+              {recentProduct.map((x: Product) => (
+                <CardSmall product={x} key={x.slug} />
+              ))}
             </div>
           </div>
         </div>
