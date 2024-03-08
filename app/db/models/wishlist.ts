@@ -13,8 +13,28 @@ export type Wishlist = {
 
 export class WishlistModel {
   static async findAllWishlist(userId: ObjectId) {
-    //tambah agg
-    return (await wishlistDB.find({ userId }).toArray()) as Wishlist[];
+    const agg = [
+      {
+        $lookup: {
+          from: "Products",
+          localField: "productId",
+          foreignField: "_id",
+          as: "ProductDetails",
+        },
+      },
+      {
+        $unwind: {
+          path: "$ProductDetails",
+          preserveNullAndEmptyArrays: false,
+        },
+      },
+      {
+        $match: {
+          userId: userId,
+        },
+      },
+    ];
+    return (await wishlistDB.aggregate(agg).toArray()) as Wishlist[];
   }
 
   static async findById(wishlistId: ObjectId) {
@@ -22,23 +42,30 @@ export class WishlistModel {
   }
 
   static async addToWishlist(productId: ObjectId, userId: ObjectId) {
-    const data = await this.findAllWishlist(userId);
+    try {
+      console.log(productId, userId, "Dari models");
+      
+      const data = await this.findAllWishlist(userId);
+      const validate = data.filter(
+        (x) => x.productId.toString() === productId.toString()
+      );
+      console.log(validate.length);
 
-    const validate = data.filter(
-      (x) => x.productId.toString() === productId.toString()
-    );
-    // console.log(validate);
+      if (validate.length > 0) throw new Error("DuplicateWishlist");
 
-    if (validate.length > 0) throw new Error("error bg");
+      await wishlistDB.insertOne({
+        userId: userId,
+        productId: productId,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      });
 
-    await wishlistDB.insertOne({
-      userId: userId,
-      productId: productId,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    });
-
-    return null;
+      console.log("OK");
+      
+      return null;
+    } catch (error) {
+      throw error;
+    }
   }
 
   static async deleteWishlist(wishlistId: ObjectId) {

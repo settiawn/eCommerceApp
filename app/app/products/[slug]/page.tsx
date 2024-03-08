@@ -1,3 +1,5 @@
+import { addWishlist } from "@/actions/wishlist";
+import AddToWishlistButton from "@/components/bt-add-wishlist";
 import { MiniCard } from "@/components/card-mini";
 import { Tag } from "@/components/tag";
 import { Product } from "@/db/models/product";
@@ -42,7 +44,7 @@ export default async function ProductDetail({
                   />
                   <div className="flex justify-between absolute bottom-0 w-full">
                     <div className="w-full bg-sky-500 font-bold p-3 text-white hover:cursor-pointer hover:bg-blue-500 rounded-b-sm">
-                      ADD TO WISHLIST
+                      < AddToWishlistButton slug={data.slug} />
                     </div>
                   </div>
                 </div>

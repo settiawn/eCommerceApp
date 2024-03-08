@@ -1,6 +1,9 @@
 import Link from "next/link";
+import LogoutButton from "./bt-logout";
+import { cookies } from "next/headers";
 
 export default function Navbar() {
+  const token = cookies().get("Authorization")?.value;
   return (
     <div className="container mx-auto">
       <div className="flex justify-between bg-gray-500">
@@ -26,9 +29,19 @@ export default function Navbar() {
           <div className="hover:bg-gray-800 hover:cursor-pointer p-3">
             <Link href="/wishlist">WISHLIST</Link>
           </div>
-          <div className="hover:bg-gray-800 hover:cursor-pointer p-3">
-            <Link href="/login">LOGIN</Link>
-          </div>
+          {token ? (
+            <>
+              <div className="hover:bg-gray-800 hover:cursor-pointer p-3">
+                <LogoutButton />
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="hover:bg-gray-800 hover:cursor-pointer p-3">
+                <Link href="/login">LOGIN</Link>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>

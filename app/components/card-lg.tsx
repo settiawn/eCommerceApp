@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ProductCardProps } from "./card-med";
 import { Tag } from "./tag";
+import { addWishlist } from "@/actions/wishlist";
 
 export function CardLarge({ product }: ProductCardProps) {
   return (
@@ -31,7 +32,13 @@ export function CardLarge({ product }: ProductCardProps) {
       </div>
       <div className="flex justify-between absolute bottom-0 right-0">
         <div className="rounded-br-lg w-full bg-sky-500 font-bold p-3 text-white hover:cursor-pointer hover:bg-blue-500">
-          ADD TO WISHLIST
+          <button
+            onClick={() => {
+              addWishlist(product.slug);
+            }}
+          >
+            ADD TO WISHLIST
+          </button>
         </div>
       </div>
     </div>

@@ -1,6 +1,32 @@
-import { CardMedium } from "../../components/card-med";
+"use client";
+import { useEffect, useState } from "react";
+import { CardWishlist } from "@/components/card-wishlist";
+import { Product } from "@/db/models/product";
+import { Wishlist } from "@/db/models/wishlist";
+
+type WishlistDetail = Partial<Wishlist> & { ProductDetails: Product };
 
 export default function Wishlist() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    const responseRecentProducts = await fetch(
+      "http://localhost:3000/api/wishlist",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const { data } = await responseRecentProducts.json();
+    setData(data);
+  };
+
   return (
     <main className="container flex mx-auto flex-col">
       <div className="grid">
@@ -10,14 +36,10 @@ export default function Wishlist() {
             <div className="flex justify-center">
               <div className="text-blue-500 font-bold text-5xl">WISHLIST</div>
             </div>
-            <div className="grid gap-4 grid-cols-5 grid-rows-1 px-5">
-              {/* <CardMedium />
-              <CardMedium />
-              <CardMedium />
-              <CardMedium />
-              <CardMedium />
-              <CardMedium />
-              <CardMedium /> */}
+            <div className="grid gap-4 grid-cols-7 grid-rows-1 px-5">
+              {data.map((x: WishlistDetail, i: number) => (
+                <CardWishlist product={x.ProductDetails} key={i} />
+              ))}
             </div>
           </div>
         </div>
