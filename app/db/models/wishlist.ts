@@ -22,7 +22,15 @@ export class WishlistModel {
   }
 
   static async addToWishlist(productId: ObjectId, userId: ObjectId) {
-    // userId masih hardcode
+    const data = await this.findAllWishlist(userId);
+
+    const validate = data.filter(
+      (x) => x.productId.toString() === productId.toString()
+    );
+    // console.log(validate);
+
+    if (validate.length > 0) throw new Error("error bg");
+
     await wishlistDB.insertOne({
       userId: userId,
       productId: productId,
@@ -30,14 +38,13 @@ export class WishlistModel {
       updatedAt: new Date(),
     });
 
-    return "added to wishlist";
+    return null;
   }
 
   static async deleteWishlist(wishlistId: ObjectId) {
     await wishlistDB.deleteOne({
       _id: wishlistId,
     });
-
-    return "wishlist deleted";
+    return null;
   }
 }
