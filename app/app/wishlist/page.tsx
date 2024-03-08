@@ -11,13 +11,13 @@ export default function Wishlist() {
               <div className="text-blue-500 font-bold text-5xl">WISHLIST</div>
             </div>
             <div className="grid gap-4 grid-cols-5 grid-rows-1 px-5">
+              {/* <CardMedium />
               <CardMedium />
               <CardMedium />
               <CardMedium />
               <CardMedium />
               <CardMedium />
-              <CardMedium />
-              <CardMedium />
+              <CardMedium /> */}
             </div>
           </div>
         </div>

@@ -12,22 +12,32 @@ export type Wishlist = {
 };
 
 export class WishlistModel {
-  //tambah validasi
-  static async findAllWishlist() {
-    //tambahin agg buat punya users only
-    return (await wishlistDB.find().toArray()) as Wishlist[];
+  static async findAllWishlist(userId: ObjectId) {
+    //tambah agg
+    return (await wishlistDB.find({ userId }).toArray()) as Wishlist[];
   }
 
-  static async addToWishlist(productId: string) {
+  static async findById(wishlistId: ObjectId) {
+    return (await wishlistDB.findOne({ _id: wishlistId })) as Wishlist;
+  }
+
+  static async addToWishlist(productId: ObjectId, userId: ObjectId) {
     // userId masih hardcode
-    await wishlistDB.insertOne({ productId: new ObjectId(productId) });
+    await wishlistDB.insertOne({
+      userId: userId,
+      productId: productId,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
     return "added to wishlist";
   }
 
-  static async deleteWishlist(wishlistId: string) {
+  static async deleteWishlist(wishlistId: ObjectId) {
     await wishlistDB.deleteOne({
-      _id: new ObjectId(wishlistId),
+      _id: wishlistId,
     });
+
     return "wishlist deleted";
   }
 }
