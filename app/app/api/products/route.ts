@@ -7,6 +7,7 @@ export type SearchOptions = {
   sort?: string;
   type?: string;
   limit?: string;
+  page?: string;
 };
 
 export async function GET(request: Request) {
@@ -14,16 +15,19 @@ export async function GET(request: Request) {
   const sort = searchParams.get("sort");
   const type = searchParams.get("type");
   const query = searchParams.get("query");
-  const limit = searchParams.get("limit");
+  const page = searchParams.get("page");
+  // const limit = searchParams.get("limit");
+  
 
   const options = {
     query,
     sort,
     type,
-    limit
+    page,
+    // limit
   };
 
   const data = await ProductModel.findAllProducts(options as SearchOptions);
 
-  return NextResponse.json<ServerResponse<Product[]>>({ data });
+  return NextResponse.json<ServerResponse<Product[]>>({ data: data.data, meta: data.meta });
 }

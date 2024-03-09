@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ProductCardProps } from "./card-med";
 
 export function CardSmall({ product }: ProductCardProps) {
@@ -12,9 +13,10 @@ export function CardSmall({ product }: ProductCardProps) {
       </div>
       <div className="flex-1 px-1">
         <div className="font-bold w-72">
-          {product.name}
+          <Link href={"/products/" + product.slug}>{product.name}</Link>
         </div>
-        <div className="py-2 text-white">{product.author}</div>
+        <div className="pt-2 text-white">{product.author}</div>
+        <div className=" text-white">Volume {product.images.length}</div>
       </div>
     </div>
   );

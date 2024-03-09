@@ -1,6 +1,7 @@
 import { ObjectId } from "mongodb";
 import { db } from "../config";
 import { SearchOptions } from "@/app/api/products/route";
+import { Meta, ServerResponse } from "../helpers/type";
 
 const productDB = db.collection("Products");
 
@@ -22,16 +23,15 @@ export type Product = {
 
 export class ProductModel {
   static async findAllProducts(options: SearchOptions) {
-    console.log(options, "<<<<<< baru dateng");
     if (!options.type) delete options.type;
     if (!options.sort) delete options.sort;
     if (!options.query) delete options.query;
-    if (!options.limit) delete options.limit;
+    if (!options.page) delete options.page;
+    // if (!options.limit) delete options.limit;
     // -1 => newest
     // 1 => oldest
 
     const regex = new RegExp(options.query as string, "i");
-    console.log(regex);
 
     const agg = [];
 
@@ -59,14 +59,37 @@ export class ProductModel {
       });
     }
 
-    if (options.limit) {
-      return (await productDB
-        .aggregate(agg)
-        .limit(+options.limit)
-        .toArray()) as Product[];
+    // if (options.limit) {
+    //   return (await productDB
+    //     .aggregate(agg)
+    //     .limit(+options.limit)
+    //     .toArray()) as Product[];
+    // }
+
+    const totalProducts = await productDB.count();
+    const dataPerPage = 5;
+    const totalPage = Math.ceil(totalProducts / dataPerPage);
+    let skippedData: number = 0;
+
+    if (Number(options.page) > 1) {
+      skippedData = dataPerPage * Number(options.page);
     }
 
-    return (await productDB.aggregate(agg).toArray()) as Product[];
+    const result = (await productDB
+      .aggregate(agg)
+      .skip(skippedData)
+      .limit(dataPerPage)
+      .toArray()) as Product[];
+
+    return <ServerResponse<Product[]>>{
+      data: result,
+      meta: {
+        currentPage: Number(options.page),
+        totalPage,
+        dataPerPage,
+        totalData: totalProducts
+      },
+    };
     // return (await productDB.find().toArray()) as Product[];
   }
 
