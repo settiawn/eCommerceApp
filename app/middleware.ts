@@ -33,7 +33,7 @@ export async function middleware(request: NextRequest) {
   } catch (error) {
     return NextResponse.json(
       {
-        error: "Internal Server Error1",
+        error: "Internal Server Error",
       },
       {
         status: 500,

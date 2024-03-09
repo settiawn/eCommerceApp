@@ -9,7 +9,6 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const userId = request.headers.get("x-id-user") ?? ("" as string);
-    console.log(body, userId, "<Dari server");
 
     const data = await ProductModel.findProductBySlug(body.slug);
     if (!data) {
@@ -20,8 +19,6 @@ export async function POST(request: Request) {
     }
 
     await WishlistModel.addToWishlist(data._id, new ObjectId(userId));
-
-    console.log("OK from controller");
 
     return NextResponse.json<ServerResponse<string>>(
       { message: "Added to wishlist" },
@@ -41,7 +38,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json(
       {
-        error: "Internal Server Error3",
+        error: "Internal Server Error",
       },
       {
         status: 500,

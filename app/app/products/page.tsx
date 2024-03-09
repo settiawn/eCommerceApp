@@ -137,6 +137,9 @@ export default function Products() {
         <div className="col-span-5">
           {/* //errordisini */}
           <ErrHandler/>
+          <div className="pl-1">
+            infinite scroll properly jalan di url sort to 'latest' // default kebuka pas page ini di load. (developernya males nge-adjust 1-1 per type and so on)
+          </div>
         </div>
         <div className="col-span-1 bg-gray-700 py-1 px-3">
           <div className="w-full text-sky-500 font-bold text-2xl p-1 border-b-4">

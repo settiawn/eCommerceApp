@@ -70,7 +70,6 @@ export default async function Home() {
       <div className=" bg-slate-500 grid">
         <div className="col-span-5 bg-blue-300">
           {/* carousel */}
-          {/* <Carousel /> */}
           <div className="flex rounded overflow-hidden shadow-lg bg-white relative px-0 p-0 justify-center content-center">
             <div className="flex absolute h-full w-full bg-sky-800  opacity-50"></div>
             <div className="flex absolute h-full w-full text-white justify-center content-center text-center">
