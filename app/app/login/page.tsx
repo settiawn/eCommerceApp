@@ -63,7 +63,7 @@ export default function Login() {
               <LoginButton />
             </form>
             <div className="text-center font-semibold hover:text-blue-500">
-              <Link href="/register">Don't have an account? Register</Link>
+              <Link href="/register">Dont have an account? Register</Link>
             </div>
           </div>
         </div>
