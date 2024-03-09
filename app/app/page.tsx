@@ -31,7 +31,7 @@ export default async function Home() {
   ];
 
   const responseRecentProducts = await fetch(
-    "http://localhost:3000/api/products?sort=-1&limit=5",
+    process.env.NEXT_PUBLIC_BASE_URL + "/api/products?sort=-1&limit=5",
     {
       method: "GET",
       headers: {
@@ -42,7 +42,8 @@ export default async function Home() {
   const { data: recentProduct } = await responseRecentProducts.json();
 
   const responseNewManga = await fetch(
-    "http://localhost:3000/api/products?sort=-1&limit=5&type=manga",
+    process.env.NEXT_PUBLIC_BASE_URL +
+      "/api/products?sort=-1&limit=5&type=manga",
     {
       method: "GET",
       headers: {
@@ -53,7 +54,8 @@ export default async function Home() {
   const { data: newManga } = await responseNewManga.json();
 
   const responseNewNovel = await fetch(
-    "http://localhost:3000/api/products?sort=-1&limit=5&type=novel",
+    process.env.NEXT_PUBLIC_BASE_URL +
+      "/api/products?sort=-1&limit=5&type=novel",
     {
       method: "GET",
       headers: {
@@ -61,13 +63,14 @@ export default async function Home() {
       },
     }
   );
-  const { data: newNovel } = await responseNewNovel.json()
+  const { data: newNovel } = await responseNewNovel.json();
 
   return (
     <main className="container flex mx-auto flex-col">
       <div className=" bg-slate-500 grid">
         <div className="col-span-5 bg-blue-300">
           {/* carousel */}
+          {/* <Carousel /> */}
           <div className="flex rounded overflow-hidden shadow-lg bg-white relative px-0 p-0 justify-center content-center">
             <div className="flex absolute h-full w-full bg-sky-800  opacity-50"></div>
             <div className="flex absolute h-full w-full text-white justify-center content-center text-center">
@@ -86,11 +89,7 @@ export default async function Home() {
             </div>
             <div className="flex items-center">
               <div className="">
-                <img
-                  src="https://cms.j-novel.club/content/images/2023/07/mainsite_banner_OLNC.png"
-                  alt="cover_art"
-                  className=""
-                />
+                <img src={banners[0].url} alt="cover_art" />
               </div>
             </div>
           </div>
@@ -116,7 +115,6 @@ export default async function Home() {
                 <CardMedium product={x} key={x.slug} />
               ))}
             </div>
-
           </div>
 
           {/* new manga series */}
@@ -137,7 +135,6 @@ export default async function Home() {
                 <CardMedium product={x} key={x.slug} />
               ))}
             </div>
-
           </div>
 
           {/* new novel series */}
@@ -168,7 +165,7 @@ export default async function Home() {
           <div className="w-100 border m-2">
             <div className="flex flex-row justify-between font-bold text-2xl hover:cursor-pointer">
               <div className="hover:bg-gray-600 text-sky-500 w-full text-center p-2">
-              RECENT UPDATES
+                RECENT UPDATES
               </div>
             </div>
             <div className="p-1">

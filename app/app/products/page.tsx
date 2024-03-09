@@ -2,18 +2,26 @@
 import { useEffect, useState } from "react";
 import { CardLarge } from "../../components/card-lg";
 import { Product } from "@/db/models/product";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { ErrHandler } from "@/components/error-handler";
 
 export default function Products() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Product[]>([]);
   const [searchInput, setSearchInput] = useState("");
+  const [currentPage, setCurrentPage] = useState(0);
+  const [totalPage, setTotalPage] = useState(0);
+  const [dataLength, setDataLength] = useState(0);
+  const [hasMore, setHasMore] = useState(true);
+
+
 
   useEffect(() => {
     getNewest();
   }, []);
 
   const getNewest = async () => {
-    const responseRecentProducts = await fetch(
-      "http://localhost:3000/api/products?sort=-1&limit=5",
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_BASE_URL + "/api/products?sort=-1&page=1",
       {
         method: "GET",
         headers: {
@@ -21,13 +29,39 @@ export default function Products() {
         },
       }
     );
-    const { data: recentProduct } = await responseRecentProducts.json();
-    setData(recentProduct);
+    const { data: products, meta } = await response.json();
+
+    setCurrentPage(meta.currentPage);
+    setTotalPage(meta.totalPage);
+    setDataLength(meta.totalData);
+    setData(products);
+  };
+
+  const fetchMoreDataNewest = async () => {
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_BASE_URL + "/api/products?sort=-1&page=" + (currentPage + 1),
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const { data: recentProduct, meta } = await response.json();
+
+    setTimeout(() => {
+      setCurrentPage(meta.currentPage);
+      const combinedData = [...data, ...recentProduct];
+      if (currentPage > totalPage) {
+        setHasMore(false);
+      }
+      setData(combinedData);
+    }, 1500);
   };
 
   const getOldest = async () => {
-    const responseRecentProducts = await fetch(
-      "http://localhost:3000/api/products?sort=1&limit=5",
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_BASE_URL + "/api/products?sort=1&page=1",
       {
         method: "GET",
         headers: {
@@ -35,13 +69,17 @@ export default function Products() {
         },
       }
     );
-    const { data: recentProduct } = await responseRecentProducts.json();
-    setData(recentProduct);
+    const { data: products, meta } = await response.json();
+
+    setCurrentPage(meta.currentPage);
+    setTotalPage(meta.totalPage);
+    setDataLength(meta.totalData);
+    setData(products);
   };
 
   const getNovel = async () => {
-    const responseRecentProducts = await fetch(
-      "http://localhost:3000/api/products?sort=-1&type=novel&limit=5",
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_BASE_URL + "/api/products?sort=1&page=1&type=novel",
       {
         method: "GET",
         headers: {
@@ -49,13 +87,17 @@ export default function Products() {
         },
       }
     );
-    const { data: recentProduct } = await responseRecentProducts.json();
-    setData(recentProduct);
+    const { data: products, meta } = await response.json();
+
+    setCurrentPage(meta.currentPage);
+    setTotalPage(meta.totalPage);
+    setDataLength(meta.totalData);
+    setData(products);
   };
 
   const getManga = async () => {
-    const responseRecentProducts = await fetch(
-      "http://localhost:3000/api/products?sort=-1&type=manga&limit=5",
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_BASE_URL + "/api/products?sort=1&page=1&type=manga",
       {
         method: "GET",
         headers: {
@@ -63,13 +105,17 @@ export default function Products() {
         },
       }
     );
-    const { data: recentProduct } = await responseRecentProducts.json();
-    setData(recentProduct);
+    const { data: products, meta } = await response.json();
+
+    setCurrentPage(meta.currentPage);
+    setTotalPage(meta.totalPage);
+    setDataLength(meta.totalData);
+    setData(products);
   };
 
   const getSearch = async (input: string) => {
-    const responseRecentProducts = await fetch(
-      "http://localhost:3000/api/products?sort=-1&query=" + input,
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_BASE_URL + "/api/products?sort=1&page=1&query=" + input,
       {
         method: "GET",
         headers: {
@@ -77,14 +123,21 @@ export default function Products() {
         },
       }
     );
-    const { data: recentProduct } = await responseRecentProducts.json();
-    setData(recentProduct);
+    const { data: products, meta } = await response.json();
+
+    setCurrentPage(meta.currentPage);
+    setTotalPage(meta.totalPage);
+    setDataLength(meta.totalData);
+    setData(products);
   };
 
   return (
     <main className="container flex mx-auto flex-col">
       <div className=" bg-gray-700 grid">
-        <div className="col-span-5 bg-blue-300"></div>
+        <div className="col-span-5">
+          {/* //errordisini */}
+          <ErrHandler/>
+        </div>
         <div className="col-span-1 bg-gray-700 py-1 px-3">
           <div className="w-full text-sky-500 font-bold text-2xl p-1 border-b-4">
             Sort By
@@ -129,9 +182,18 @@ export default function Products() {
                 SEARCH
               </button>
             </div>
-            {data.map((x: Product) => (
-              <CardLarge product={x} key={x.slug} />
-            ))}
+
+            <InfiniteScroll
+              dataLength={data.length}
+              next={fetchMoreDataNewest}
+              hasMore={hasMore}
+              loader={<h4>Loading...</h4>}
+              endMessage={<h4>End of the list</h4>}
+            >
+              {data.map((x: Product) => (
+                <CardLarge product={x} key={x.slug} />
+              ))}
+            </InfiniteScroll>
           </div>
         </div>
       </div>

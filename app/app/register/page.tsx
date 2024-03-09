@@ -13,13 +13,16 @@ export default function Register() {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
 
-    const response = await fetch("http://localhost:3000/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, username, email, password }),
-    });
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_BASE_URL + "/api/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, username, email, password }),
+      }
+    );
 
     const result = await response.json();
 
@@ -41,7 +44,7 @@ export default function Register() {
               </div>
             </div>
 
-            < FormError />
+            <FormError />
 
             <form className="flex flex-col pt-5" action={handleRegister}>
               <input
@@ -76,8 +79,8 @@ export default function Register() {
                 required
                 autoComplete="password"
               />
-              
-              < RegisterButton />
+
+              <RegisterButton />
             </form>
             <div className="text-center font-semibold hover:text-blue-500">
               <Link href="/login">Already have an account? Log in</Link>

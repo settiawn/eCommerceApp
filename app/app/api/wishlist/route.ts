@@ -28,12 +28,10 @@ export async function POST(request: Request) {
       { status: 201 }
     );
   } catch (error) {
-    console.log(error);
-    
-    if (error === "DuplicateWishlist") {
+    if (error instanceof Error) {
       return NextResponse.json(
         {
-          error: "Already have this series in wishlist",
+          error: error.message,
         },
         {
           status: 403,
@@ -43,7 +41,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json(
       {
-        error: "Internal Server Error",
+        error: "Internal Server Error3",
       },
       {
         status: 500,
@@ -55,10 +53,10 @@ export async function POST(request: Request) {
 export async function DELETE(request: Request) {
   try {
     const body = await request.json();
-    
+
     const userId = request.headers.get("x-id-user") ?? ("" as string);
     const data = await WishlistModel.findById(body.wishlistId);
-    
+
     if (!data) throw error;
     if (data.userId.toString() !== userId) throw error;
 
@@ -69,10 +67,10 @@ export async function DELETE(request: Request) {
     });
   } catch (error) {
     console.log(error);
-    
+
     return NextResponse.json(
       {
-        error: "Internal Server Error",
+        error: "Internal Server Error2",
       },
       {
         status: 500,

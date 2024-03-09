@@ -32,12 +32,15 @@ export async function generateMetadata(
 }
 
 async function fetchDataBySlug(slug: string) {
-  const response = await fetch("http://localhost:3000/api/products/" + slug, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const response = await fetch(
+    process.env.NEXT_PUBLIC_BASE_URL + "/api/products/" + slug,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
   if (!response.ok) {
     throw new Error("Error!");
   }

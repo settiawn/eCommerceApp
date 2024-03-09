@@ -35,5 +35,5 @@ export const removeWishlist = async (wishlistId: string) => {
     return redirect("/products?error=" + result.error);
   }
 
-  return redirect("/products")
+  return redirect("/products");
 };

@@ -68,11 +68,11 @@ export class ProductModel {
 
     const totalProducts = await productDB.count();
     const dataPerPage = 5;
-    const totalPage = Math.ceil(totalProducts / dataPerPage);
+    const totalPage = Math.floor(totalProducts / dataPerPage);
     let skippedData: number = 0;
 
-    if (Number(options.page) > 1) {
-      skippedData = dataPerPage * Number(options.page);
+    if (Number(options.page) >= 2) {
+      skippedData = dataPerPage * (Number(options.page) - 1);
     }
 
     const result = (await productDB
@@ -87,7 +87,7 @@ export class ProductModel {
         currentPage: Number(options.page),
         totalPage,
         dataPerPage,
-        totalData: totalProducts
+        totalData: totalProducts,
       },
     };
     // return (await productDB.find().toArray()) as Product[];

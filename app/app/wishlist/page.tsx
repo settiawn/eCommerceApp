@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { CardWishlist } from "@/components/card-wishlist";
 import { Product } from "@/db/models/product";
 import { Wishlist } from "@/db/models/wishlist";
+import { ErrHandler } from "@/components/error-handler";
 
 export type WishlistDetail = Partial<Wishlist> & { ProductDetails: Product };
 
@@ -15,7 +16,7 @@ export default function Wishlist() {
 
   const getData = async () => {
     const responseRecentProducts = await fetch(
-      "http://localhost:3000/api/wishlist",
+      process.env.NEXT_PUBLIC_BASE_URL + "/api/wishlist",
       {
         method: "GET",
         headers: {
@@ -29,6 +30,7 @@ export default function Wishlist() {
 
   return (
     <main className="container flex mx-auto flex-col">
+      <ErrHandler />
       <div className="grid">
         <div className="col-span-4 bg-gray-700 ">
           {/* per div */}

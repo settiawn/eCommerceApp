@@ -38,7 +38,9 @@ export class WishlistModel {
   }
 
   static async findById(wishlistId: string) {
-    return (await wishlistDB.findOne({ _id: new ObjectId(String(wishlistId)) })) as Wishlist;
+    return (await wishlistDB.findOne({
+      _id: new ObjectId(String(wishlistId)),
+    })) as Wishlist;
   }
 
   static async addToWishlist(productId: ObjectId, userId: ObjectId) {
@@ -48,7 +50,8 @@ export class WishlistModel {
         (x) => x.productId.toString() === productId.toString()
       );
 
-      if (validate.length > 0) throw new Error("DuplicateWishlist");
+      if (validate.length > 0)
+        throw new Error("You already have this series on your wishlist");
 
       await wishlistDB.insertOne({
         userId: userId,
@@ -56,7 +59,7 @@ export class WishlistModel {
         createdAt: new Date(),
         updatedAt: new Date(),
       });
-      
+
       return null;
     } catch (error) {
       throw error;

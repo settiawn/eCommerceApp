@@ -5,9 +5,8 @@ import { decodeToken } from "./db/helpers/jwt";
 
 export async function middleware(request: NextRequest) {
   try {
-    let token = cookies().get("Authorization")?.value.split(" ")[1]
-    console.log(!token, typeof token, "<ini dari middleware");
-    
+    let token = cookies().get("Authorization")?.value.split(" ")[1];
+
     if (!token) {
       return NextResponse.json(
         {
@@ -32,11 +31,9 @@ export async function middleware(request: NextRequest) {
 
     return response;
   } catch (error) {
-    console.log(error);
-
     return NextResponse.json(
       {
-        error: "Internal Server Error",
+        error: "Internal Server Error1",
       },
       {
         status: 500,
